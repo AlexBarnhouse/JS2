@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/677da7751d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Catalog</title>
+</head>
+
+<body>
+    <div class="wrapper" id="app">
+        <div class="wrapper-top">
+            <header class="header">
+                <div class="header-bar wrap-box">
+                    <ul class="header-left">
+                        <li class="header-left-item">
+                            <a class="header__logo" href="index.html">
+                                <img src="img/logo.svg" alt="logo">
+                            </a>
+                        </li>
+                        <li class="header-left-item header-search">
+                            <input class="search-show" type="checkbox" id="search-toggle">
+                            <label class="search-button" for="search-toggle">
+                                <img class="search-img" src="img/search.svg" alt="search">
+                            </label>
+
+                            <filter-el></filter-el>
+                        </li>
+                    </ul>
+
+                    <ul class="header-right">
+                        <li class="header-right-item menu-button">
+                            <img src="img/menu.svg" alt="menu">
+                            <nav class="menu">
+                                <div class="menu-block">
+                                    <h2 class="menu-block-title pink-color">Man</h2>
+                                    <a class="menu-block-item" href="#">Accessories</a>
+                                    <a class="menu-block-item" href="#">Bags</a>
+                                    <a class="menu-block-item" href="#">Denim</a>
+                                    <a class="menu-block-item" href="#">T-Shirts</a>
+                                </div>
+
+                                <div class="menu-block">
+                                    <h2 class="menu-block-title pink-color">Woman</h2>
+                                    <a class="menu-block-item" href="#">Accessories</a>
+                                    <a class="menu-block-item" href="#">Jackets & Coats</a>
+                                    <a class="menu-block-item" href="#">Polos</a>
+                                    <a class="menu-block-item" href="#">T-Shirts</a>
+                                    <a class="menu-block-item" href="#">Shirts</a>
+                                </div>
+
+                                <div class="menu-block">
+                                    <h2 class="menu-block-title pink-color">Kids</h2>
+                                    <a class="menu-block-item" href="#">Accessories</a>
+                                    <a class="menu-block-item" href="#">Jackets & Coats</a>
+                                    <a class="menu-block-item" href="#">Polos</a>
+                                    <a class="menu-block-item" href="#">T-Shirts</a>
+                                    <a class="menu-block-item" href="#">Shirts</a>
+                                    <a class="menu-block-item" href="#">Bags</a>
+                                </div>
+                            </nav>
+                        </li>
+
+                        <li class="header-right-item">
+                            <a href="registration.html"><img src="img/login.svg" alt="account"></a>
+                        </li>
+
+                        <cart ref="cart"></cart>
+                    </ul>
+                </div>
+            </header>
+
+            <nav class="bread-nav">
+                <div class="wrap-box nav-flex content-box">
+                    <h3 class="nav-page-name">NEW ARRIVALS</h3>
+                    <ul class="nav-bread">
+                        <li class="bread-item">
+                            <a href="index.html" class="bread-link">HOME</a>
+                        </li>
+
+                        <li class="bread-item">
+                            <a href="#" class="bread-link">MEN</a>
+                        </li>
+
+                        <li class="bread-item">NEW ARRIVALS</li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section class="filter-bar wrap-box content-box">
+                <details class="filter-megabox">
+                    <summary class="megabox-summary">FILTER <i class="fa-solid fa-align-justify filter-ico"></i></summary>
+
+                    <details class="filter-megabox-item">
+                        <summary class="megabox-item-summary filter-block-unit">CATEGORY</summary>
+                        <div class="filter-item">
+                                <a href="" class="filter-item-link">
+                                    Accessories
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Bags
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Denim
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Hoodies & Sweatshirts
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Jackets & Coats
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Polos
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Shirts
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Shoes
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Sweaters & Knits
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    T-Shirts
+                                </a>
+
+                                <a href="" class="filter-item-link">
+                                    Tanks
+                                </a>
+                        </div>
+                    </details>
+
+                    <details class="filter-megabox-item">
+                        <summary class="megabox-item-summary filter-block-unit">BRAND</summary>
+                        <div class="filter-item">
+                            <a href="" class="filter-item-link">
+                                Accessories
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Bags
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Denim
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Hoodies & Sweatshirts
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Jackets & Coats
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Polos
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Shirts
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Shoes
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Sweaters & Knits
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                T-Shirts
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Tanks
+                            </a>
+                        </div>
+                    </details>
+
+                    <details class="filter-megabox-item">
+                        <summary class="megabox-item-summary filter-block-unit">DESIGNER</summary>
+                        <div class="filter-item">
+                            <a href="" class="filter-item-link">
+                                Accessories
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Bags
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Denim
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Hoodies & Sweatshirts
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Jackets & Coats
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Polos
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Shirts
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Shoes
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Sweaters & Knits
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                T-Shirts
+                            </a>
+
+                            <a href="" class="filter-item-link">
+                                Tanks
+                            </a>
+                        </div>
+                    </details>
+                </details>
+
+                <div class="catalog-option-box">
+                    <div class="option-block catalog-option-block">
+                        <div class="option-sec">
+                            <input class="sec-show" type="checkbox" id="color">
+                            <label class="sec-title" for="color">TRENDING NOW</label>
+                            <ul class="sec-list">
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-color" value="black" id="black">
+                                    <label class="sec-item" for="black">Black</label>
+                                </li>
+
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-color" value="white" id="white">
+                                    <label class="sec-item" for="white">White</label>
+                                </li>
+
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-color" value="gray" id="gray">
+                                    <label class="sec-item" for="gray">Gray</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="option-sec">
+                            <input class="sec-show" type="checkbox" id="size">
+                            <label class="sec-title" for="size">SIZE</label>
+                            <ul class="sec-list">
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-size" value="small" id="small">
+                                    <label class="sec-item" for="small">S</label>
+                                </li>
+
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-size" value="medium" id="medium">
+                                    <label class="sec-item" for="medium">M</label>
+                                </li>
+
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-size" value="large" id="large">
+                                    <label class="sec-item" for="large">L</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="option-sec">
+                            <input class="sec-show" type="checkbox" id="quantity">
+                            <label class="sec-title" for="quantity">PRICE</label>
+                            <ul class="sec-list">
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-quantity" value="one" id="one">
+                                    <label class="sec-item" for="one">1</label>
+                                </li>
+
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-quantity" value="two" id="two">
+                                    <label class="sec-item" for="two">2</label>
+                                </li>
+
+                                <li class="sec-list-item">
+                                    <input type="radio" name="item-quantity" value="three" id="three">
+                                    <label class="sec-item" for="three">3</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="catalog-products-board wrap-box content-box">
+                <products ref="products"></products>
+            </div>
+
+            <nav class="pagi-margin-bttm button-flex">
+                <ul class="pagination">
+                    <li class="pagi-item"><a class="pagi-link nav-button" href="#"><i class="fa-solid fa-angle-left"></i></a></li>
+                    <li class="pagi-item"><a class="pagi-link active-page" href="#">1</a></li>
+                    <li class="pagi-item"><a class="pagi-link" href="#">2</a></li>
+                    <li class="pagi-item"><a class="pagi-link" href="#">3</a></li>
+                    <li class="pagi-item"><a class="pagi-link" href="#">4</a></li>
+                    <li class="pagi-item"><a class="pagi-link" href="#">5</a></li>
+                    <li class="pagi-item"><a class="pagi-link nav-button" href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+                </ul>
+            </nav>
+
+            <section class="bottom">
+                <div class="bottom-content wrap-box content-box">
+                    <div class="bottom-block">
+                        <img src="img/bot__delivery.svg" alt="delivery" class="bottom-block-img">
+                        <p class="bottom-block-title">Free Delivery</p>
+                        <p class="bottom-block-txt">Worldwide delivery on all. Authorit tively morph next&#8209generation innov tion with extensive models.</p>
+                    </div>
+
+                    <div class="bottom-block">
+                        <img src="img/bot__discount.png" alt="delivery" class="bottom-block-img">
+                        <p class="bottom-block-title">Free Delivery</p>
+                        <p class="bottom-block-txt">Worldwide delivery on all. Authorit tively morph next&#8209generation innov tion with extensive models.</p>
+                    </div>
+
+                    <div class="bottom-block">
+                        <img src="img/bot__crown.png" alt="delivery" class="bottom-block-img">
+                        <p class="bottom-block-title">Free Delivery</p>
+                        <p class="bottom-block-txt">Worldwide delivery on all. Authorit tively morph next&#8209generation innov tion with extensive models.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+
+            <div class="footer-top">
+                <div class="footer-top-content wrap-box">
+                    <figure class="footer-top-left">
+                        <img class="commentator" src="img/commentator.png" alt="opinion">
+                        <figcaption class="comment">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</figcaption>
+                    </figure>
+                    <div class="footer-top-right">
+                        <h3 class="footer-top-right-header">subscribe</h3>
+                        <p class="footer-top-right-txt">FOR OUR NEWLETTER AND PROMOTION</p>
+                        <form class="footer-top-right-form" action="#">
+                            <input class="form-input-txt footer-form-email" type="email" placeholder="Enter Your Email">
+                            <input class="footer-form-submit" type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content wrap-box">
+                    <p class="footer-copy">
+                        &copy 2021 Brand All Rights Reserved.
+                    </p>
+
+                    <div class="footer-socials">
+                        <a href="#" class="socials-link">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="socials-link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="socials-link">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+                        <a href="#" class="socials-link">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/ProductComponent.js"></script>
+    <script src="js/CartComponent.js"></script>
+    <script src="js/FilterComp.js"></script>
+    <script src="js/ErrorComp.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

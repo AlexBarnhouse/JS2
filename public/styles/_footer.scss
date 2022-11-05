@@ -1,0 +1,172 @@
+.footer {
+  background: $base-black;
+}
+
+.footer-top {
+  background: url(../img/footer-img.jpg) no-repeat bottom;
+  background-size: cover;
+  background-position: 25% bottom;
+}
+
+.footer-top-content {
+  min-height: 448px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-top-left {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  margin: 97px 0 0;
+}
+
+.commentator {
+  width: 96px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.comment {
+  @include font-base($lato, 400, 20px, 24px);
+  text-align: center;
+  color: $base-black;
+  padding-bottom: 126px;
+}
+
+.footer-top-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 557px;
+  align-self: center;
+}
+
+.footer-top-right-header {
+  @include font-base($lato, 700, 24px, 40px);
+  text-align: center;
+  color: $base-black;
+  text-transform: uppercase;
+}
+
+.footer-top-right-txt {
+  @include font-base($lato, 400, 18px, 30px);
+  text-align: center;
+  color: $base-black;
+  text-transform: uppercase;
+}
+
+.footer-top-right-form {
+  display: flex;
+  align-self: center;
+  max-width: 356px;
+  margin-top: 32px;
+}
+
+.footer-form-email {
+  @include font-base($lato, 400, 14px, 17px);
+  border-color: transparent;
+  background: $form-bgr;
+  max-width: 256px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.footer-form-submit {
+  @include font-base($lato, 400, 14px, 17px);
+  background: $base-pink;
+  color: $white;
+  width: 100px;
+  padding: 7px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 1px solid transparent;
+  transition-duration: 0.2s;
+
+  &:hover {
+    background: $white;
+    color: $base-pink;
+    border: 1px solid $base-pink;
+  }
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-copy {
+  @include font-base($lato, 400, 16px, 19px);
+  color: $white;
+}
+
+.footer-socials {
+  display: flex;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: $white;
+  margin-right: 7px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background: $base-pink;
+  }
+
+  .fa-brands {
+    color: $base-black;
+  }
+
+  &:hover .fa-brands {
+    color: $white;
+  }
+}
+
+@media screen
+and (max-width: 1024px) {
+  .footer-top-content {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 219px;
+  }
+
+  .comment {
+    padding-bottom: 48px;
+  }
+}
+
+@media screen
+and (max-width: 767px) {
+  .footer-bottom-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer-copy {
+    margin-top: 25px;
+  }
+
+  .comment {
+    @include font-base($lato, 400, 18px, 22px);
+  }
+
+  .footer-top-right-header {
+    @include font-base($lato, 700, 24px, 38px);
+  }
+
+  .footer-top-right-txt {
+    @include font-base($lato, 400, 14px, 21px);
+  }
+}

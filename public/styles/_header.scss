@@ -1,0 +1,155 @@
+.header {
+  background: $base-black;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  list-style: none;
+}
+
+.header-left-item {
+  margin-left: 41px;
+  padding-top: 18px;
+  padding-bottom: 21px;
+}
+
+.search-img {
+  transform: translateY(9px);
+}
+
+.header-search {
+  display: flex;
+}
+
+.search-show, .search-form {
+  display: none;
+}
+
+.search-form {
+  margin-left: 10px;
+  align-self: center;
+  border: none;
+}
+
+.search-input {
+  background: $form-bgr;
+  padding: 7px 22px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid transparent;
+  outline:none;
+}
+
+.search-submit {
+  background: $base-pink;
+  color: $white;
+  padding: 7px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid transparent;
+  transition-duration: 0.2s;
+
+  &:hover {
+    background: $white;
+    color: $base-pink;
+    border: 1px solid $base-pink;
+  }
+}
+
+.search-button {
+  cursor: pointer;
+}
+
+.search-show:checked ~ .search-form {
+  display: flex;
+}
+
+.header-right {
+  display: flex;
+}
+
+.header-right-item {
+  padding: 26px 16px 20px;
+  list-style: none;
+
+  &:first-of-type {
+    padding-top: 30px;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+    position: relative;
+  }
+}
+
+.menu-button {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  background: $white;
+  border: 1px solid $form-bgr;
+  top: 79px;
+  right: 0;
+  left: auto;
+  display: none;
+}
+
+.header-right-item:hover .menu {
+  display: block;
+  z-index: 1;
+}
+
+.menu-block:last-of-type {
+  padding-bottom: 20px;
+}
+
+.menu-block-title {
+  @include font-base($lato, 400, 14px, 17px);
+  color: $base-pink;
+  padding-top: 20px;
+  padding-left: 33px;
+  text-transform: uppercase;
+}
+
+.menu-block-item {
+  @include font-base($lato, 400, 14px, 17px);
+  color: $base-gray;
+  display: block;
+  text-decoration: none;
+  padding: 8px 55px 0;
+  white-space: nowrap;
+  transition-duration: 0.2s;
+
+  &:hover {
+    color: $base-pink;
+    transform: scale(1.2);
+  }
+}
+
+.btn-cart {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen
+and (max-width: 767px) {
+  .header-right-item {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .search-show:checked ~ .search-form {
+    display: none;
+  }
+}

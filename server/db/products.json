@@ -1,0 +1,22 @@
+[
+  {
+    "id_product": 124,
+    "product_name": "jacket",
+    "price": 80
+  },
+  {
+    "id_product": 457,
+    "product_name": "Suit",
+    "price": 120
+  },
+  {
+    "id_product": 123,
+    "product_name": "Sweater",
+    "price": 30
+  },
+  {
+    "id_product": 456,
+    "product_name": "trousers",
+    "price": 45
+  }
+]
