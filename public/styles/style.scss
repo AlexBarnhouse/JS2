@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import "vars";
+@import "normalize";
+
+@mixin font-base($fFamily, $fWeight, $fSize, $lHeight) {
+  font-family: $fFamily;
+  font-weight: $fWeight;
+  font-size: $fSize;
+  line-height: $lHeight;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-top {
+  flex-grow: 1;
+}
+
+.wrap-box {
+  max-width: $wrap-box-width;
+  margin: 0 auto;
+}
+
+.content-box {
+  padding: 0 2% 0;
+}
+
+.form-input-txt {
+  @include font-base($lato, 300, 13px, 16px);
+  border: 1px solid $form-brd;
+  outline: none;
+  padding: 13px 17px 16px;
+}
+
+.form-input-number {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &,
+  &:hover,
+  &focus {
+    appearance: none;
+    -moz-appearance: textfield;
+  }
+}
+
+.button-base {
+  @include font-base($lato, 300, 14px, 17px);
+  padding: 16px 40px;
+  cursor: pointer;
+}
+
+.button-small {
+  @include font-base($lato, 300, 13px, 13px);
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.button-gray {
+  color: $base-black;
+  background-color: $white;
+  border: 1px solid $button-gray;
+  transition-duration: 0.2s;
+
+  &:hover {
+    color: $base-pink;
+    background-color: $white;
+    border: 1px solid $base-pink;
+  }
+}
+
+.button-pink {
+  background: $base-pink;
+  color: $white;
+  border: 1px solid transparent;
+  transition-duration: 0.2s;
+
+  &:hover {
+    background: $white;
+    color: $base-pink;
+    border: 1px solid $base-pink;
+  }
+}
+
+@import "header";
+
+@import "footer";
+
+@import "index";
+
+@import "product";
+
+@import "catalog";
+
+@import "registration";
+
+@import "cart";
+
+@import "basket";

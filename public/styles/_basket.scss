@@ -1,0 +1,74 @@
+.basket {
+  position: absolute;
+  z-index: 3;
+  right: 0px;
+  top: 76px;
+  font-size: 18px;
+  white-space: nowrap;
+  background: white;
+  padding: 0 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(235, 235, 235);
+  border-image: initial;
+  border-radius: 3px;
+}
+
+.basket-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.basket-item-img {
+  width: 97px;
+}
+
+.basket-item-txt {
+  box-sizing: border-box;
+  padding: 10px 25px;
+}
+
+.basket-item-name {
+  @include font-base($lato, 400, 24px, 29px);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $base-black;
+  transition-duration: 0.2s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.basket-item-info {
+  @include font-base($lato, 400, 22px, 26px);
+  color: $dark-gray;
+  margin-top: 6px;
+}
+
+.basket-item-info-price {
+  color: $base-pink;
+}
+
+.purchase-item-info-quantity {
+  outline: none;
+  color: $base-gray;
+  padding-left:16px;
+}
+
+.purchase-item-info-other {
+  color: $base-gray;
+  text-transform: capitalize;
+}
+
+.basket-item-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  top: 28px;
+  right: 22px;
+}

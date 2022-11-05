@@ -1,0 +1,264 @@
+.cart-main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 96px;
+  padding-bottom: 128px;
+}
+
+.cart-purchase-list {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.purchase-item {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.purchase-item-img {
+  width: 260px;
+}
+
+.purchase-item-txt {
+  box-sizing: border-box;
+  padding: 22px 97px 10px 31px;
+}
+
+.purchase-item-name {
+  @include font-base($lato, 400, 24px, 29px);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $base-black;
+  transition-duration: 0.2s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.purchase-item-info {
+  @include font-base($lato, 400, 22px, 26px);
+  color: $dark-gray;
+  margin-top: 6px;
+
+  &:first-of-type {
+    margin-top: 42px;
+  }
+
+  .purchase-item-info-price {
+    color: $base-pink;
+  }
+
+  .purchase-item-info-other {
+    color: $base-gray;
+    text-transform: capitalize;
+  }
+
+  .purchase-item-info-quantity {
+    outline: none;
+    color: $base-gray;
+    padding-left:16px;
+    text-align: center;
+  }
+
+}
+
+.purchase-item-delete {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  top: 28px;
+  right: 22px;
+}
+
+.cart-purchase-list-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.cart-purchase-button {
+  text-transform: uppercase;
+}
+
+.continue-shop-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cart-form-block {
+  width: 30%;
+  margin-left: 2%;
+}
+
+.cart-shipping {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-shipping-header {
+  @include font-base($lato, 400, 16px, 19px);
+  color: $base-black;
+}
+
+.cart-shipping-input {
+  margin-top: 21px;
+}
+
+.cart-shipping-button-box {
+  margin-top: 24px;
+}
+
+.cart-shipping-button {
+  text-transform: uppercase;
+}
+
+.cart-total {
+  box-sizing: border-box;
+  background-color: $bread-bgr;
+  margin-top: 57px;
+  padding: 40px 44px;
+}
+
+.cart-total-price {
+  border-bottom: 1px  solid $form-bgr;
+}
+
+.sub-total {
+  @include font-base($lato, 400, 13px, 13px);
+  text-align: left;
+  margin-bottom: 12px;
+
+  .sub-total-span {
+    margin-left: 20px;
+  }
+}
+
+.grand-total {
+  @include font-base($lato, 300, 16px, 19px);
+  text-align: left;
+  margin-bottom: 21px;
+
+  .grand-total-span {
+    margin-left: 20px;
+    font-weight: 400;
+    color: $base-pink;
+  }
+}
+
+.cart-total-button {
+  width: 100%;
+  margin-top: 17px;
+  white-space: nowrap;
+}
+
+@media screen
+and (max-width: 1024px) {
+  .cart-main {
+    flex-direction: column;
+  }
+
+  .cart-form-block {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .cart-purchase-list-buttons {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen
+and (min-device-width: 768px)
+and (max-width: 1024px) {
+
+  .cart-form-block {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 64px;
+  }
+
+  .cart-shipping {
+    width: 50%;
+  }
+
+  .cart-total {
+    width: 50%;
+    height: 50%;
+    margin-top: 40px;
+    margin-left: 2%;
+  }
+}
+
+@media screen
+and (min-device-width: 375px)
+and (max-width: 767px) {
+
+  .cart-main {
+    padding-bottom: 96px;
+  }
+
+  .nav-flex {
+    justify-content: center;
+  }
+
+  .purchase-item-img {
+    width: 143px;
+  }
+
+  .purchase-item-txt {
+    padding: 14px 53px 10px 17px;
+  }
+
+  .purchase-item-name {
+    @include font-base($lato, 400, 16px, 19px);
+  }
+
+  .purchase-item-info {
+    @include font-base($lato, 400, 14px, 17px);
+    color: $dark-gray;
+    margin-top: 6px;
+
+    &:first-of-type {
+      margin-top: 26px;
+    }
+  }
+
+  .purchase-item-delete {
+    top: 17px;
+    right: 12px;
+  }
+
+  .cart-purchase-button {
+    @include font-base($lato, 400, 12px, 14px);
+    padding: 9px 18px;
+    text-transform: none;
+  }
+
+  .cart-form-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 48px;
+  }
+
+  .cart-shipping {
+    width: 100%;
+  }
+
+  .cart-shipping-button {
+    @include font-base($lato, 400, 13px, 13px);
+    text-transform: none;
+  }
+
+  .cart-total {
+    width: 100%;
+    margin-top: 48px;
+    margin-left: 0;
+  }
+}

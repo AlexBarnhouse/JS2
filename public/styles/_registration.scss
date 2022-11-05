@@ -1,0 +1,88 @@
+.reg-main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+  margin-bottom: 94px;
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  width: 359px;
+}
+
+.reg-form-title {
+  @include font-base($lato, 300, 16px, 19px);
+}
+
+.reg-form-input {
+  margin-top: 21px;
+}
+
+.form-radio-block {
+  margin: 32px 0;
+}
+
+.form-radio-item {
+  margin-right: 20px;
+}
+
+.form-radio-txt {
+  display: inline;
+  @include font-base($lato, 300, 13px, 16px);
+  margin-left: 10px;
+}
+
+.form-pass-instr {
+  @include font-base($lato, 300, 13px, 16px);
+  color: $base-gray;
+  margin-top: 15px;
+  padding-bottom: 39px;
+}
+
+.reg-form-submit {
+  @include font-base($lato, 400, 14px, 17px);
+  color: $white;
+  text-transform: uppercase;
+  background-color: $base-pink;
+  border: 1px solid transparent;
+  padding: 16px 29px;
+  transition-duration: 0.2s;
+
+  .reg-form-submit-arrow {
+    margin-left: 20px;
+  }
+
+  &:hover {
+    color: $base-pink;
+    background-color: $white;
+    border: 1px solid $base-pink;
+  }
+}
+
+.reg-benefit {
+  margin-left: 128px;
+}
+
+.reg-benefit-txt {
+  @include font-base($lato, 300, 24px, 29px)
+}
+
+.reg-benefit-header {
+  text-transform: uppercase;
+}
+
+.reg-benefit-prelist {
+  max-width: 650px;
+  padding-top: 21px;
+}
+
+.reg-benefit-list {
+  list-style-position: inside;
+  list-style-image: url("/img/arrow-ok.png");
+  padding-top: 21px;
+}
+
+.reg-benefit-list-item {
+  padding-bottom: 16px;
+}
